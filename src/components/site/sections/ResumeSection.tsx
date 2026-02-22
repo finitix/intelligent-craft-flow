@@ -36,8 +36,8 @@ export default function ResumeSection() {
       <div className="rounded-xl border border-border/60 bg-card/40 p-6 backdrop-blur-md">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <p className="font-display text-lg font-semibold">Pranadeep Devasani</p>
-          <Button asChild variant="hero" disabled={!row?.public_url}>
-            <a href={row?.public_url ?? "#"} target="_blank" rel="noreferrer">
+          <Button asChild variant="hero">
+            <a href="/resume/Pranadeep_CV.pdf" target="_blank" rel="noreferrer" download>
               Download Resume
             </a>
           </Button>
