@@ -4,11 +4,7 @@ import { cn } from "@/lib/utils";
 
 const links = [
   { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
-  { href: "#research", label: "Research" },
-  { href: "#experience", label: "Experience" },
-  { href: "#certifications", label: "Certs" },
   { href: "#resume", label: "Resume" },
   { href: "#contact", label: "Contact" },
 ];
@@ -63,7 +59,7 @@ export default function HeaderNav({ currentPath }: { currentPath: string }) {
             <a href="#projects">View Work</a>
           </Button>
           <Button asChild variant="hero" className="hidden sm:inline-flex">
-            <a href="#resume">Download</a>
+            <a href="#contact">Contact</a>
           </Button>
           <Button asChild variant="glowOutline" size="icon" className="md:hidden" aria-label="Jump to contact">
             <a href="#contact">
