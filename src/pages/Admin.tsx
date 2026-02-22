@@ -191,25 +191,6 @@ export default function Admin() {
               {authLoading ? "Signing in…" : "Sign in"}
             </Button>
           </form>
-
-          <div className="mt-6 rounded-lg border border-border/60 bg-background/30 p-4">
-            <p className="font-mono text-xs text-muted-foreground">No account?</p>
-            <p className="mt-2 text-sm text-muted-foreground">Create one, then come back and sign in.</p>
-            <Button
-              className="mt-3 w-full"
-              variant="glowOutline"
-              onClick={async () => {
-                setAuthLoading(true);
-                const { error } = await supabase.auth.signUp({ email, password });
-                setAuthLoading(false);
-                if (error) toast({ title: "Sign-up failed", description: error.message });
-                else toast({ title: "Check your email", description: "Confirm your email, then sign in." });
-              }}
-              disabled={authLoading}
-            >
-              Create account
-            </Button>
-          </div>
         </section>
       </main>
     );
