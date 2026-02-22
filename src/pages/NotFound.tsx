@@ -28,7 +28,7 @@ const NotFound = () => {
             <a href="/">Return to Home</a>
           </Button>
           <Button asChild variant="glowOutline" size="lg">
-            <a href="/projects">Explore Projects</a>
+            <a href="/#projects">Explore Projects</a>
           </Button>
         </div>
       </section>
