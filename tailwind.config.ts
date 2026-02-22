@@ -13,6 +13,11 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["IBM Plex Sans", "Inter", "ui-sans-serif", "system-ui"],
+        display: ["Inter", "ui-sans-serif", "system-ui"],
+        mono: ["JetBrains Mono", "ui-monospace", "SFMono-Regular"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -58,6 +63,14 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
+      backgroundImage: {
+        "gradient-data": "var(--gradient-data)",
+      },
+      boxShadow: {
+        "glow-xs": "var(--shadow-glow-xs)",
+        "glow-sm": "var(--shadow-glow-sm)",
+        "glow-md": "var(--shadow-glow-md)",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -67,25 +80,40 @@ export default {
         "accordion-down": {
           from: {
             height: "0",
+            opacity: "0",
           },
           to: {
             height: "var(--radix-accordion-content-height)",
+            opacity: "1",
           },
         },
         "accordion-up": {
           from: {
             height: "var(--radix-accordion-content-height)",
+            opacity: "1",
           },
           to: {
             height: "0",
+            opacity: "0",
           },
+        },
+        "float-slow": {
+          "0%, 100%": { transform: "translate3d(0, 0, 0)" },
+          "50%": { transform: "translate3d(0, -8px, 0)" },
+        },
+        "scanline": {
+          "0%": { transform: "translate3d(-20%, 0, 0)" },
+          "100%": { transform: "translate3d(120%, 0, 0)" },
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        "accordion-down": "accordion-down 0.2s cubic-bezier(0.16, 1, 0.3, 1)",
+        "accordion-up": "accordion-up 0.2s cubic-bezier(0.16, 1, 0.3, 1)",
+        "float-slow": "float-slow 8s ease-in-out infinite",
+        scanline: "scanline 4.5s cubic-bezier(0.16, 1, 0.3, 1) infinite",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+
