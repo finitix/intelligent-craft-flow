@@ -121,10 +121,10 @@ export default function HeroExperience() {
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <Button asChild variant="hero" size="lg">
-              <a href="/projects">View My Work</a>
+              <a href="#projects">View My Work</a>
             </Button>
             <Button asChild variant="glowOutline" size="lg">
-              <a href="/resume">Download Resume</a>
+              <a href="#resume">Download Resume</a>
             </Button>
           </div>
         </motion.div>
